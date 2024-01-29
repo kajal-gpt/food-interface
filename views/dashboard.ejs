@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    body{
+        background-image: url('/images/background2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: kalnia;
+        font-weight: 400;
+        font-size: 25px;
+        overflow-y: hidden;
+      
+    
+    }
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+   
+    .lm{
+        margin-top: 1%
+    }
+   
+.foot-panel4{
+    background-color: #0f1111;
+    color: white;
+    height: 100px;
+}
+.pages{
+    font-family: kalnia;
+        font-weight: 200;
+text-align: center;
+padding-top: 25px;
+}
+.copyright{
+    font-family: kalnia;
+    font-size: 0.9rem;
+    text-align: center;
+    padding-top: 5px;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid lm">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"><img src="/images/icon6.png" width="40px" height="30px"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="/interface/foodinterface">Add Order</a></li>
+        <li><a href="#">Stores</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/admin/logout"><span class="glyphicon"></span>Logout</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container lm">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-dark">        <div class="panel-heading">Coffees</div>
+        <div class="panel-body"><img src="/images/coffee.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy Coffee and get offers</div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-dark">
+        <div class="panel-heading">Donuts</div>
+        <div class="panel-body"><img src="/images/donut.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy Donuts and get offer </div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-dark">
+        <div class="panel-heading">Friday Meals</div>
+        <div class="panel-body"><img src="/images/pic1.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy more items and get offers</div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<br><br>
+
+
+
+<footer class="navbar navbar-inverse">
+    <div class="foot-panel4">
+        <div class="pages">
+            <a>Condition of use </a>
+            <a>Privacy Notice</a>
+            <a>Your Ads Privacy Choices </a>
+        </div>
+        <div class="copyright">
+            © 1996-2023, Amazon.com, Inc. or its affiliates
+        </div>
+    </div>
+  </footer>
+
+</body>
+</html>

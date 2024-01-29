@@ -1,0 +1,170 @@
+<style>
+    body{
+       
+        background-image: url('/images/background.png');
+        background-repeat: no-repeat;
+            background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: kalnia;
+        font-weight: 200;
+        font-size: 120px;
+    }
+    .container{
+      
+       
+        border-radius: 10px;
+        border: 3px solid black;
+        background-color: rgb(23 23 45 / 69%);
+        color: white;
+    }
+    .box
+    {
+        display: flex;
+       justify-content: space-between;
+       color: white;
+    }
+    .heading{
+     
+
+   font-family: kalnia;
+   margin-top: 2%;
+   
+    }
+    img{
+        border-radius: 50px;
+        cursor: pointer;
+    }
+ .pl{
+   width: 12%;
+ }
+.btn{
+    padding: 2%;
+    width: 33%;
+}
+.drop{
+    display: flex;
+    flex-direction: column;
+
+}
+div{
+    flex-direction: row;
+    justify-content: space-between;
+}
+</style>
+<head>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="/javascripts/projects.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500&family=Poppins:wght@300&family=Roboto:wght@500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<html>
+
+<div class="container">
+<div class="box">
+
+
+  <a href="/admin/dashboard">
+   <img src="/images/icon7.png" alt="f" width="100px" height="100px"></a>
+   <h2 class="heading">FOOD INTERFACE</h2>
+   <a href="/interface/fetch_food_show">
+   <img src="/images/icon5.png" alt="" width="100px" height="100px">
+  </a>
+ 
+</div>
+
+
+<form action="/interface/submit_food" method="post" class="row g-3" enctype="multipart/form-data">
+<div class="col-md-6">
+    <label for="foodtypeid" class="form-label">Food Type</label>
+    <select class="form-select" id="foodS" name="foodtypeid">
+        <option>Select Food Type</option>
+      </select>
+  </div>
+  <div class="col-md-6">
+    <label for="hotelsid" class="form-label">Hotel</label>
+    <select class="form-select" id="hotel" name="hotelsid">
+        <option selected>Select Hotel</option>
+      </select> 
+     </div>
+  <div class="col-md-6">
+    <label for="dishid" class="form-label">Dishes</label>
+    <select class="form-select" id="dish" name="dishid">
+      <option>Select Dish</option>
+    </select>
+   </div>
+  <div class="col-md-6">
+    <label for="titleid" class="form-label">Quantity</label>
+    <select class="form-select" name="qty" id="inputGroupSelect01">
+        <option selected>1 Plate</option>
+        <option >2 Plate</option>
+        <option >3 Plate</option>
+        <option >4 Plate</option>
+      </select>  </div>
+  <div class="col-md-6">
+    <label for="prize" class="form-label">Price</label>
+    <input type="text" name="prize" class="form-control" placeholder="Price" id="prize">
+  </div>
+  <div class="col-md-6">
+    <label for="offer" class="form-label">Offer</label>
+    <input type="text" name="offer" class="form-control" placeholder="Offer" id="offer">
+  </div>
+  <div class="col-md-6">
+    <label for="date" class="form-label">Date</label>
+    <input type="date" name="date" class="form-control" placeholder="Date" id="date">
+  </div>
+  <div class="col-md-6">
+    <label for="time" class="form-label">Time</label>
+    <input type="time" name="time" class="form-control" placeholder="Time" id="time">
+  </div>
+  <div class="col-md-6 drop">
+    <label for="status" class="form-label">Status</label>
+    <div class="div">
+    <input class="form-check-input"  type="radio" value="vag" name="status" id="vag">
+    <label class="form-check-label" for="status">
+   Vag
+   </label>
+  
+   <input class="form-check-input" type="radio" name="status" value="non-vag" id="vag">
+   <label class="form-check-label" for="status">
+   Non-Vag
+   </label>
+</div>
+  </label>
+</div>
+
+ 
+
+  <div class="col-md-6">
+    <label for="poster" class="form-label">Poster</label>
+    <input type="file" name="poster" class="form-control" id="poster" aria-label="Upload">
+
+  </div>
+  <div class="col-md-6">
+    <button type="submit" class="btn btn-danger">Submit</button>
+  </div>
+  <div class="col-md-6">
+    <button type="reset" class="btn btn-danger">Reset</button>
+  </div>
+  <div class="col-md-12 centerstyle">
+    <% if(status==1) { %>
+    <span style="color: rgb(68, 255, 68); font-size: 20px;"><%=message %></span>
+    <% } else if(status==0) { %>
+    <span style="color: rgb(255, 51, 51); font-size: 20px;"><%=message %></span>
+    <% } %>
+
+  </div>
+  
+</form>
+</div>
+
+
+</html>
